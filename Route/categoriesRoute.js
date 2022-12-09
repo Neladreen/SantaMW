@@ -9,8 +9,8 @@ function categoriesRoute(app, db) {
 
   // SHOW
   app.get("/categories/:id", async (req, res) => {
-    const id = res.params.id;
-    const responseDB = await db.query("SELECT * WHERE id=(?)", [id]);
+    const id = req.params.id;
+    const responseDB = await db.query("SELECT * FROM categories WHERE id=(?)", [id]);
     res.json({ status: 200, responseDB });
   });
 

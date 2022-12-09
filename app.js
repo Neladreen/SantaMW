@@ -25,7 +25,7 @@ mysql.createConnection(connectionOptions).then(async (db) => {
 
   categoriesRoute(app, db);
 
-  toysRoute(app,db)
+  toysRoute(app, db);
 });
 
 app.listen(port, () => {
