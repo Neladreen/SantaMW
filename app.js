@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 const connectionOptions = {
     host : process.env.HOST,
     database : process.env.DATABASE,
-    user : process.env.USER,
+    user : process.env.USERDB,
     password : process.env.PASSWORD,
     port : process.env.PORT
 }
-const port = 5001;
+const port = 5000;
 
 mysql.createConnection(connectionOptions)
     .then(async (db) => {
